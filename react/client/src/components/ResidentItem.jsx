@@ -11,9 +11,6 @@ class ResidentItem extends React.Component {
     this.props.onDeleteResident(this.props.resident.id)
   }
 
-  editSelectedResident(event){
-      this.props.onEditResident(this.props.resident.id)
-    }
 
 
   render() {
@@ -22,8 +19,8 @@ class ResidentItem extends React.Component {
     return(
       <div id="room-list">
         <p>Name: {this.props.resident.name}</p>
-        
-          <button className="button" onClick={() => {this.deleteSelectedResident(this.props.resident.id)}}>Delete</button>
+          <button className="button"
+            onClick={() => {this.deleteSelectedResident(this.props.resident.id)}}>Delete</button>
       </div>
     )
   }

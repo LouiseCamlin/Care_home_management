@@ -73,13 +73,11 @@ class RoomContainer extends React.Component {
    handleRoomSelect(event) {
      const newIndex = event.target.value;
      this.setState({roomId: newIndex})
-     console.log("room id on select", this.state.roomId);
    }
 
    submitNewOccupant(event){
      event.preventDefault()
      this.addNewOccupant(this.state.roomId, this.state.residentId)
-     console.log("room id at submit", this.state.roomId);
    }
 
    addNewOccupant(roomId, residentId) {
@@ -102,11 +100,6 @@ class RoomContainer extends React.Component {
    }
 
   render() {
-    console.log(this.state);
-    console.log("rooms:", this.state.rooms);
-    //console.log("occupied rooms:", this.state.occupiedRooms);
-    console.log("residents:", this.state.residents);
-
 
     const residentOptions = this.state.residents.map((resident, index) => {
       return <option value ={resident.id} key={index}>{resident.name}</option>
@@ -135,7 +128,7 @@ class RoomContainer extends React.Component {
             value="Assign room"/>
         </form>
         <h2>Rooms</h2>
-        <RoomList rooms={this.state.rooms} occupiedRooms={this.state.occupiedRooms}
+        <RoomList rooms={this.state.rooms}
           onDeleteOccupant={this.deleteOccupant.bind(this)}/>
       </div>
     )

@@ -44,19 +44,6 @@ class ResidentContainer extends React.Component {
     request.send(JSON.stringify(newResident))
   }
 
-  // editResident(id, newResidentName){
-  //   const url = 'http://localhost:5000/api/residents/' + id
-  //   const updatedResident = {resident: {name: newResidentName}}
-  //   const jsonString = JSON.stringify(updatedResident)
-  //   const request = new XMLHttpRequest();
-  //   request.open('PUT', url)
-  //   request.setRequestHeader("Content-Type", "application/json")
-  //   request.onload = () => {
-  //     this.getResidentList()
-  //   }
-  //   request.send(jsonString)
-  // }
-
 
   deleteResident(id){
     const url = 'http://localhost:5000/api/residents/' + id
@@ -79,7 +66,6 @@ class ResidentContainer extends React.Component {
         <h2>Residents</h2>
         <ResidentList residents={this.state.residents}
           onDeleteResident={this.deleteResident.bind(this)}
-          //onEditResident={this.editResident.bind(this)}
           onAddResident={this.addResident.bind(this)}
           residentKeyUp={this.state.residentKeyUp}/>
 

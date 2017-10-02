@@ -22,7 +22,6 @@ class ResidentList extends React.Component {
   }
 
 
-
   render() {
     const residentItem = this.props.residents.map((resident, index) => {
       return (

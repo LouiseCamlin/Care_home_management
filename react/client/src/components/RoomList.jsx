@@ -8,6 +8,12 @@ class RoomList extends React.Component {
 
   }
 
+  // mapOccupantNodes() {
+  //   const occupantNodes = this.props.occupiedRooms.map((occupiedRoom, index) => {
+  //     return <button onClick={() => {this.deleteSelectedOccupant(occupiedRoom.id)}}>Delete</button>
+  //   })
+  //   return occupantNodes
+  // }
 
 
 
@@ -23,7 +29,7 @@ class RoomList extends React.Component {
           <div>
             <RoomItem key={index} value={index} room={room}
               occupiedRooms={this.props.occupiedRooms}
-          
+
               onDeleteOccupant={this.props.onDeleteOccupant}/>
           </div>
         )

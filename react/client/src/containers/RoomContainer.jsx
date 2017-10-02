@@ -92,7 +92,7 @@ class RoomContainer extends React.Component {
    }
 
    deleteOccupant(id){
-     const url = 'http://localhost:5000/api/resident_room/' + id
+     const url = 'http://localhost:5000/api/resident_rooms/' + id
      const request = new XMLHttpRequest();
      request.open('DELETE', url);
      request.onload = () => {
